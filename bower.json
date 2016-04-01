@@ -1,0 +1,10 @@
+{
+  "name": "SpringApp",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "Font-Awesome#4.5.0",
+    "scrollup": "^2.4.1",
+    "jquery-prettyPhoto": "^3.1.6",
+    "seiyria-bootstrap-slider": "^6.1.6"
+  }
+}

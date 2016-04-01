@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>First Spring Store</title>
+    <link th:href="@{/resources/bower_components/bootstrap/LICENSE}" rel="stylesheet" />
+    <link th:href="@{/resources/bower_components/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/resources/bower_components/font-awesome/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link th:href="@{/resources/bower_components/jquery-prettyPhoto/css/prettyPhoto.css}" rel="stylesheet"/>
+    <link th:href="@{/resources/bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js}" rel="stylesheet"/>
+
+    <link th:href="@{/resources/css/animate.css}" rel="stylesheet"/>
+    <link th:href="@{/resources/css/main.css}" rel="stylesheet"/>
+    <link th:href="@{/resources/css/responsive.css}" rel="stylesheet"/>
+</head>
+
+<body>
+    <div th:replace="fragments/header :: header"></div>
+    <div layout:fragment="content"></div>
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <script th:src="@{/resources/bower_components/jquery/dist/jquery.min.js}"></script>
+    <script th:src="@{/resources/bower_components/bootstrap/dist/js/bootstrap.min.js}"></script>
+    <script th:src="@{/resources/bower_components/scrollup/dist/jquery.scrollUp.min.js}"></script>
+    <script th:src="@{/resources/bower_components/jquery-prettyPhoto/js/jquery.prettyPhoto.js}"></script>
+    <script th:src="@{/resources/bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js}"></script>
+    <script th:src="@{/resources/js/main.js}"></script>
+</body>
+</html>
