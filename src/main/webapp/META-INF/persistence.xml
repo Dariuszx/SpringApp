@@ -5,5 +5,16 @@
         <jta-data-source>jdbc/spring_store</jta-data-source>
         <class>com.store.db.Product</class>
         <class>com.store.db.Category</class>
+        <class>com.store.db.User</class>
+        <class>com.store.db.Authorities</class>
+        <class>com.store.db.Users</class>
+        <properties>
+            <property name="eclipselink.logging.level.sql" value="INFO"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/spring_store"/>
+            <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="eclipselink.jdbc.user"/>
+            <property name="eclipselink.jdbc.password"/>
+        </properties>
     </persistence-unit>
 </persistence>
