@@ -12,6 +12,7 @@ public class User {
     private Boolean enabled;
     private Timestamp dateRegistered;
     private String role;
+    private Integer cart_id;
 
 
     @Id
@@ -74,6 +75,15 @@ public class User {
         this.role = role;
     }
 
+    @JoinTable(name = "cart",
+            joinColumns = @JoinColumn(name = "cart_id", referencedColumnName = "user_id"))
+    public Integer getCart_id() {
+        return cart_id;
+    }
+
+    public void setCart_id(Integer cart_id) {
+        this.cart_id = cart_id;
+    }
 
     @Override
     public boolean equals(Object o) {

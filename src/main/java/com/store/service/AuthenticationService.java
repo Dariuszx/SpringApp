@@ -18,13 +18,17 @@ public class AuthenticationService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
+    private com.store.db.User user;
 
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        com.store.db.User userInfo = userRepository.getUserInfo(username);
-        GrantedAuthority authority = new SimpleGrantedAuthority(userInfo.getRole());
-        UserDetails userDetails = new User(userInfo.getUsername(), userInfo.getPassword(), Arrays.asList(authority));
+        user = userRepository.getUserInfo(username);
+        GrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
+        UserDetails userDetails = new User(user.getUsername(), user.getPassword(), Arrays.asList(authority));
         return userDetails;
     }
 
+    public com.store.db.User getUser() {
+        return user;
+    }
 }

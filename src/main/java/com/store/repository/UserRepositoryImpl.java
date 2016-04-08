@@ -18,8 +18,10 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public User getUserInfo(String username) {
 
-        String sql = "SELECT u.user_id, u.username username, u.password password, a.authority role " +
-                "FROM users u INNER JOIN authorities a ON u.user_id = a.user_id " +
+        String sql = "SELECT u.user_id, u.username username, u.password password, a.authority role, c.cart_id " +
+                "FROM users u " +
+                "INNER JOIN authorities a ON u.user_id = a.user_id " +
+                "INNER JOIN cart c ON u.user_id = c.user_id " +
                 "WHERE u.enabled = 1 and u.username = ?";
 
         Query q = em.createNativeQuery(sql, User.class).setParameter(1, username);

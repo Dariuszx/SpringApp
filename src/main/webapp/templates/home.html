@@ -32,7 +32,7 @@
                                             <div class="overlay-content">
                                                 <h2 th:text="${product.price} + ' PLN'"></h2>
                                                 <p>Easy Polo Black Edition</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href="#" th:href="${cart.addItemToCart(product.productId, 1)}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
                                         </div>
                                     </div>
